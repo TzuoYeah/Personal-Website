@@ -8,6 +8,8 @@ $(document).ready(function(){
         allHide();
         $("#con2").show();
     });
+    $(".btn").click(function(){
+    })
 });
 
 function allHide(){
