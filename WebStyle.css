@@ -3,3 +3,11 @@ body{
   padding: 0px;
   background-color: rgb(226, 226, 226);
 }
+#page div {
+  display: block;
+}
+
+:target {
+  display: none;
+  border: 1px solid black;
+}
