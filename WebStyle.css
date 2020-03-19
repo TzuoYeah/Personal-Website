@@ -3,11 +3,14 @@ body{
   padding: 0px;
   background-color: rgb(226, 226, 226);
 }
-#page div {
-  display: block;
+/* .tab div {
+  display: none;
 }
 
-:target {
-  display: none;
-  border: 1px solid black;
+.tab div:target {
+  display: block;
+} */
+
+img{
+  position: relative;
 }

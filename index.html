@@ -3,32 +3,22 @@
     <head>     
         <title>Web</title>
         <meta charset="utf-8">
-        <meta name="description" content="個人網站">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <meta name="description" content="網站">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
         <script src="JQ_function.js"></script>
 
         <link rel="stylesheet" type="text/css" href="WebStyle.css">
     </head>
     <body>
+    <div class="tab">
         <nav>
-            <a href="#home">home</a>
-            <a href="#about">about</a>
-            <a href="#works">works</a>
+            <a id="a_home" href="#home">home</a>   
+            <a id="a_about" href="#about">about</a>
+            <a id="a_works" href="#works">works</a>
         </nav>
-        <div id="page">
-            <div id="home" >
-                <h3>A</h3>
-            </div>
-            <div id="about" >
-                <h3>BB</h3>
-            </div>
-            <div id="works" >
-                <h3>CCC</h3>
-            </div>
+        <div id="display">
         </div>
+    </div>
     </body>
 </html>
