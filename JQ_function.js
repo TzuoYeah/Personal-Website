@@ -44,15 +44,38 @@ function about(sel){
     $(sel).append("<p>");
     $("h2:last").text("About");
     $("p:last").css({'white-space':'pre-line'})
-    $("p:last").text("我是時源，不過大家都叫我十元，或雜摳。來自台中，畢業於國立臺中科技大學資訊工程學系。\n\
-    興趣是音樂及藝術，休閒愛好爬山，而資訊領域是我的專業。\n\
-    我認為軟體設計是門藝術，刁鑽的編程是一種磨練，我的專業本身便是愛好及休閒。");
-
+    $("p:last").text("我是時源，不過大家都叫我十元。來自台中，畢業於國立臺中科技大學資訊工程學系。\n\
+    興趣是音樂及藝術，休閒愛好爬山，資訊領域是我的專業。\n\
+    對我而言軟體設計是門藝術，刁鑽的編程是一種磨練，所以我熱愛我的專業。");
+    //------------------------
     $(sel).append("<h2>");
-    $(sel).append("<p>");
     $("h2:last").text("Skill");
-    $("p:last").text("Programming + DB + DevOps + Other(可能要兩列div)");
-    
+    $(sel).append("<div>");
+    $("div:last").css({
+        "display":"inline-block",
+        "width":"30px",
+        "height":"30px",
+        "border":"1px solid black"
+    });
+
+    $(sel).append("<div>");
+    $("div:last").css({
+        "display":"inline-block",
+        "width":"30px",
+        "height":"30px",
+        "border":"1px solid black"
+    });
+
+    $(sel).append("<div>");
+    $("div:last").css({
+        "display":"inline-block",
+        "width":"30px",
+        "height":"30px",
+        "border":"1px solid black"
+    });
+    //------------------------
+    $(sel).append("<h2>");
+    $("h2:last").text("經歷");
 }
 
 function works(sel){
@@ -61,4 +84,27 @@ function works(sel){
     $("h2").text("作品");
     $("p").text("自己做卡片");
     
+    $(sel).append("<div>");
+    $("div:last").css({
+        "display":"inline-block",
+        "width":"30px",
+        "height":"30px",
+        "border":"1px solid black"
+    });
+
+    $(sel).append("<div>");
+    $("div:last").css({
+        "display":"inline-block",
+        "width":"30px",
+        "height":"30px",
+        "border":"1px solid black"
+    });
+
+    $(sel).append("<div>");
+    $("div:last").css({
+        "display":"inline-block",
+        "width":"30px",
+        "height":"30px",
+        "border":"1px solid black"
+    });
 }
