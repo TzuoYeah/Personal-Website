@@ -37,12 +37,21 @@ function home(sel){
 }
 
 function about(sel){
+    /**
+     * 自我介紹(About me)->技能欄位(Skill)->學生時期 ->現況
+     */
     $(sel).append("<h2>");
-    $(sel).append("<h3>");
     $(sel).append("<p>");
-    $("h2").text("關於");
-    $("h3").text("經歷");
-    $("p").text("文字文字");
+    $("h2:last").text("About");
+    $("p:last").css({'white-space':'pre-line'})
+    $("p:last").text("我是時源，不過大家都叫我十元，或雜摳。來自台中，畢業於國立臺中科技大學資訊工程學系。\n\
+    興趣是音樂及藝術，休閒愛好爬山，而資訊領域是我的專業。\n\
+    我認為軟體設計是門藝術，刁鑽的編程是一種磨練，我的專業本身便是愛好及休閒。");
+
+    $(sel).append("<h2>");
+    $(sel).append("<p>");
+    $("h2:last").text("Skill");
+    $("p:last").text("Programming + DB + DevOps + Other(可能要兩列div)");
     
 }
 
