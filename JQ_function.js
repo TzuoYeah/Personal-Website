@@ -40,7 +40,7 @@ function about(sel){
     /**
      * 自我介紹(About me)->技能欄位(Skill)->學生時期 ->現況
      */
-    //------------------------１
+    //------------------------Ｂ１
     let PAGE = $(sel);
     PAGE.append("<h2>");
     PAGE.append("<p>");
@@ -53,40 +53,45 @@ function about(sel){
     OOOOOOOOOO");
 
 
-    //------------------------２
-    let blockStyle2 = {
+    //------------------------Ｂ２
+    let cardStyle = {
         'display':'inline-block',
         'position':'relative',
-        'width':'180px',
-        'height':'320px',
-        'border':'1px solid black'
+        'margin':'5px',
+        'width':'300px',
+        'height':'400px',
+        'background-color':' rgb(206, 206, 206)'
+        //'border':'1px solid black'
     };
-
+    let card1,card2,card3;
     PAGE.append("<h2>");
-    $("h2:last").text("Skill").css({'text-align':'center'});
-
+    let B2h2 = $("h2:last");
     PAGE.append("<div>");
-    $("div:last").attr({id:'block2'}).css({'text-align':'center'}); 
-    let block2 = $("#block2");
+    let B2div= $("div:last");
 
-    block2.append("<div>");
-    $("div:last").css(blockStyle2);
+    B2h2.text("Skill").css({'text-align':'center'});
+    B2div.css({'text-align':'center'});
 
-    block2.append("<div>");
-    $("div:last").css(blockStyle2);
+    B2div.append("<div>");
+    card1 = $("div:last");
+    B2div.append("<div>");
+    card2 = $("div:last");
+    B2div.append("<div>");
+    card3 = $("div:last");
 
-    block2.append("<div>");
-    $("div:last").css(blockStyle2);
+    card1.css(cardStyle);
+    card2.css(cardStyle);
+    card3.css(cardStyle);
 
-    
-    //------------------------３
+
+    //------------------------Ｂ３
     let blockStyle3 = {
         'display':'block',
         'position':'relative',
-        "width":"800px",
-        "height":"300px",
-        "border":"1px solid black",
-        'margin':'0 auto'
+        "width":"100%",
+        "height":"540px",
+        'background-color':' rgb(206, 206, 206)'
+        //"border":"1px solid black"
     };
     PAGE.append("<h2>");
     $("h2:last").text("第三項").css({'text-align':'center'});//經歷
@@ -98,7 +103,7 @@ function about(sel){
     block3.append("<div>");
     $("div:last").css(blockStyle3);
     /**
-     * 我是時源，不過大家都叫我十元。來自台中，畢業於國立臺中科技大學資訊工程學系。\n\
+     * 我是時源，大家都叫我十元。來自台中，畢業於國立臺中科技大學資訊工程學系。\n\
     興趣是音樂及藝術，休閒愛好爬山，資訊領域是我的專業。\n\
     對我而言軟體設計是門藝術，刁鑽的編程是一種磨練，所以我熱愛我的專業。
      */
