@@ -1,9 +1,10 @@
 $(document).ready(function(){
     var display="#display";
     init(display);
+
     $("a").click(function(){
         let id = $(this).attr("id");
-        seletePage(id);
+        seletePage(id,display);
     });
 });
 function init(sel){
@@ -15,15 +16,13 @@ function init(sel){
         home(sel);
     }
 }
-function seletePage(id){
+function seletePage(id,sel){
+    $(sel).children().remove();
     if(id =="a_about"){
-        $(display).children().remove();
         about(display);
     }else if(id == "a_works"){
-        $(display).children().remove();
         works(display);
     }else{
-        $(display).children().remove();
         home(display);
     }
 }
@@ -31,111 +30,190 @@ function home(sel){
     $(sel).append("<img>");
     $(sel).append("<h2>");
     $(sel).append("<p>");
+
     $("img").attr({src:"180x180-2.png"});
     $("h2").text("十元");
     $("p").text("\"簡介簡介簡介簡介\"");
 }
 
 function about(sel){
-    /**
-     * 自我介紹(About me)->技能欄位(Skill)->學生時期 ->現況
-     */
-    //------------------------Ｂ１
+    //------------ＧＬＯＢＡＬ-----------------
+
+    let center = {'text-align':'center'};
     let PAGE = $(sel);
+
+
+    //------------ＳＴＲＵＣＴＵＲＥ------------
+    //Ｂ１
+
+    let B1h2,B1p;
+
     PAGE.append("<h2>");
     PAGE.append("<p>");
-    let aboutTitle = $("h2:last");
-    let content = $("p:last");
-    let contentStyle = {'white-space':'pre-line','text-align':'center'};
+    B1h2 = PAGE.children("h2:last")
+    B1p = PAGE.children("p:last");
 
-    aboutTitle.text("About").css({'text-align':'center'});
-    content.css(contentStyle).text("XXXXXXXXXX\n\
-    OOOOOOOOOO");
+    //Ｂ２
 
+    let B2h2,B2div;
+    let card1,card2,card3;
+    let card1h2,card2h2,card3h2;
+    let card1p,card2p,card3p;
 
-    //------------------------Ｂ２
+    PAGE.append("<h2>");
+    PAGE.append("<div>");
+    B2h2 = PAGE.children("h2:last");
+    B2div= PAGE.children("div:last");
+    
+    B2div.append("<div>");
+    card1 = B2div.children("div:last");
+    B2div.append("<div>");
+    card2 = B2div.children("div:last");
+    B2div.append("<div>");
+    card3 = B2div.children("div:last");
+
+    card1.append("<h2>");
+    card1h2 = card1.children("h2:last");
+    card2.append("<h2>");
+    card2h2 = card2.children("h2:last");
+    card3.append("<h2>");
+    card3h2 = card3.children("h2:last");
+
+    card1.append("<p>");
+    card1p = card1.children("p:last");
+    card2.append("<p>");
+    card2p = card2.children("p:last");
+    card3.append("<p>");
+    card3p = card3.children("p:last");
+
+    //Ｂ３
+    let B3h2,B3div;
+    let board1;
+
+    PAGE.append("<h2>");
+    B3h2 = PAGE.children("h2:last");
+    PAGE.append("<div>");
+    B3div = PAGE.children("div:last");
+
+    B3div.append("<div>");
+    board1 = B3div.children("div:last");
+    //------------ＳＴＹＬＥＳ------------
+
+    //Ｂ１
+    let B1pStyle = {
+        'white-space':'pre-line',
+        'text-align':'center',
+        'margin-bottom':'30px'
+    };
+
+    //Ｂ２
+    let B2divStyle={
+        'text-align':'center',
+        'width':'auto',
+        'height':'auto'
+    }
     let cardStyle = {
         'display':'inline-block',
         'position':'relative',
-        'margin':'5px',
-        'width':'300px',
-        'height':'400px',
-        'background-color':' rgb(206, 206, 206)'
-        //'border':'1px solid black'
+        'margin':'10px',
+        'width':'220px',
+        'height':'300px',
+        'text-align':'center',
+        'background-color':'rgb(206, 206, 206)',
+        'box-shadow':'0px 10px 10px gray'
     };
-    let card1,card2,card3;
-    PAGE.append("<h2>");
-    let B2h2 = $("h2:last");
-    PAGE.append("<div>");
-    let B2div= $("div:last");
+    let cardPStyle = {
+        'white-space':'pre-line'
+    };
 
-    B2h2.text("Skill").css({'text-align':'center'});
-    B2div.css({'text-align':'center'});
-
-    B2div.append("<div>");
-    card1 = $("div:last");
-    B2div.append("<div>");
-    card2 = $("div:last");
-    B2div.append("<div>");
-    card3 = $("div:last");
-
-    card1.css(cardStyle);
-    card2.css(cardStyle);
-    card3.css(cardStyle);
-
-
-    //------------------------Ｂ３
-    let blockStyle3 = {
+    //Ｂ３
+    let B3h2Style={
+        'clear': 'left'
+    }
+    let boardStyle = {
         'display':'block',
         'position':'relative',
         "width":"100%",
         "height":"540px",
         'background-color':' rgb(206, 206, 206)'
-        //"border":"1px solid black"
     };
-    PAGE.append("<h2>");
-    $("h2:last").text("第三項").css({'text-align':'center'});//經歷
-    
-    PAGE.append("<div>");
-    $("div:last").attr({id:'block3'}).css({'margin':'40px 0px'}); 
-    let block3 = $("#block3");
 
-    block3.append("<div>");
-    $("div:last").css(blockStyle3);
+
+    //------------ＣＳＳ-----------------
+
+    //Ｂ１
+    B1h2.css(center);
+    B1p.css(B1pStyle);
+    //Ｂ２
+    B2h2.css(center);
+    B2div.css(B2divStyle);
+
+    card1.css(cardStyle);
+    card2.css(cardStyle);
+    card3.css(cardStyle);
+
+    card1p.css(cardPStyle);
+    card2p.css(cardPStyle);
+    card3p.css(cardPStyle);
+    //Ｂ３
+    B3h2.css(center);
+    B3h2.css(B3h2Style);
+    board1.css(boardStyle);
+
+
+    //------------ＴＥＸＴ---------------
+
+    //Ｂ１
+    B1h2.text("About");
+    B1p.text("XXXXXXXXXX\nOOOOOOOOOO");
+
+    //Ｂ２
+    B2h2.text("Skill");
+
+    card1h2.text("Card 1");
+    card2h2.text("Card 2");
+    card3h2.text("Card 3");
+
+    card1p.text("Card 1內容\n Card 1內容\n Card 1內容");
+    card2p.text("Card 2內容\n Card 2內容\n Card 2內容")
+    card3p.text("Card 3內容\n Card 3內容\n Card 3內容");
+    
+    //Ｂ３
+    B3h2.text("Life");
+
+
     /**
      * 我是時源，大家都叫我十元。來自台中，畢業於國立臺中科技大學資訊工程學系。\n\
-    興趣是音樂及藝術，休閒愛好爬山，資訊領域是我的專業。\n\
-    對我而言軟體設計是門藝術，刁鑽的編程是一種磨練，所以我熱愛我的專業。
+    興趣是音樂及藝術，休閒愛好爬山健身，將資訊科技領域作為畢生追求的事業。\
      */
+    //------------ＡＮＩＭＡＴＩＯＮ---------------
+
+    //Ｂ１
+    B1p.hide();
+    B1p.fadeIn(2000);
+
+    //Ｂ２
+    card1.hide();
+    card2.hide();
+    card3.hide();
+    card1.fadeIn(500);
+    card2.fadeIn(1000);
+    card3.fadeIn(1500);
+
+    //Ｂ３
+
+    //------------ＥＶＥＮＴＳ---------------
+    //Ｂ２
 }
 
 function works(sel){
-    $(sel).append("<h2>");
-    $(sel).append("<p>");
-    $("h2").text("作品");
-    $("p").text("自己做卡片");
+    let PAGE = $(sel);
+    PAGE.append("<h2>");
+    PAGE.append("<p>");
     
-    $(sel).append("<div>");
-    $("div:last").css({
-        "display":"inline-block",
-        "width":"30px",
-        "height":"30px",
-        "border":"1px solid black"
-    });
+    let h2 = PAGE.children("h2:last");
+    let p = PAGE.children("h2:last");
 
-    $(sel).append("<div>");
-    $("div:last").css({
-        "display":"inline-block",
-        "width":"30px",
-        "height":"30px",
-        "border":"1px solid black"
-    });
-
-    $(sel).append("<div>");
-    $("div:last").css({
-        "display":"inline-block",
-        "width":"30px",
-        "height":"30px",
-        "border":"1px solid black"
-    });
+    h2.text("作品");
+    p.text("自己做卡片");
 }
