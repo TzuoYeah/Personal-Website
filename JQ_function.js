@@ -110,17 +110,19 @@ function about(sel){
     let B2divStyle={
         'text-align':'center',
         'width':'auto',
-        'height':'auto'
+        'height':'340px'
     }
     let cardStyle = {
         'display':'inline-block',
         'position':'relative',
+        'top':'0px',
         'margin':'10px',
         'width':'220px',
         'height':'300px',
         'text-align':'center',
-        'background-color':'rgb(206, 206, 206)',
-        'box-shadow':'0px 10px 10px gray'
+        'background-color':'#ccc',
+        'box-shadow':'0px 10px 10px gray',
+        'transition': 'width 0.5s,height 0.5s,top 0.5s'
     };
     let cardPStyle = {
         'white-space':'pre-line'
@@ -159,8 +161,6 @@ function about(sel){
     B3h2.css(center);
     B3h2.css(B3h2Style);
     board1.css(boardStyle);
-
-
     //------------ＴＥＸＴ---------------
 
     //Ｂ１
@@ -202,8 +202,17 @@ function about(sel){
 
     //Ｂ３
 
-    //------------ＥＶＥＮＴＳ---------------
+    //------------ＨＯＶＥＲ---------------
     //Ｂ２
+    let cardView={
+        'top':'-10px',
+        'width':'244px',
+        'height':'330px'
+    };
+    card1.hover(function(){$(this).css(cardView);}  ,function(){$(this).css(cardStyle);});
+    card2.hover(function(){$(this).css(cardView);}  ,function(){$(this).css(cardStyle);});
+    card3.hover(function(){$(this).css(cardView);}  ,function(){$(this).css(cardStyle);});
+
 }
 
 function works(sel){
