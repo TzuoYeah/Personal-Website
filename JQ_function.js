@@ -27,13 +27,48 @@ function seletePage(id,sel){
     }
 }
 function home(sel){
-    $(sel).append("<img>");
-    $(sel).append("<h2>");
-    $(sel).append("<p>");
+    //------------ＧＬＯＢＡＬ-----------------
+    let PICTURE_NAME = "180x180-2.png";
+    let PAGE = $(sel);
 
-    $("img").attr({src:"180x180-2.png"});
-    $("h2").text("十元");
-    $("p").text("\"簡介簡介簡介簡介\"");
+
+    //------------ＳＴＲＵＣＴＵＲＥ------------
+    let zone,home_img,home_h2,home_p;
+    PAGE.append("<div>");
+    zone = PAGE.children('div:last');
+    zone.append("<img>");
+    home_img = zone.children('img:last');
+    zone.append("<h2>");
+    home_h2 = zone.children('h2:last');
+    zone.append("<p>");
+    home_p = zone.children('p:last');
+
+
+    //------------ＳＴＹＬＥＳ-----------------
+    let center = {
+        'text-align':'center'
+    }
+    let home_imgStyle = {
+       'margin-top':'calc(50vh - 210px)',
+       'border-radius':'90px'
+    }
+    let zoneStyle={
+        'display':'block',
+        'text-align':'center',
+        'width':'100%',
+        'height':'calc(100vh - 120px)'
+    }
+
+    //------------ＣＳＳ-----------------
+    zone.css(zoneStyle);
+    home_img.css(home_imgStyle);
+    home_h2.css(center);
+    home_p.css(center);
+
+    //------------ＴＥＸＴ---------------------
+    $("img").attr({src:PICTURE_NAME});
+    $("h2").text("姓名");
+    $("p").text("“一句話 ”");
 }
 
 function about(sel){
@@ -110,7 +145,7 @@ function about(sel){
     let B2divStyle={
         'text-align':'center',
         'width':'auto',
-        'height':'340px'
+        'height':'auto'
     }
     let cardStyle = {
         'display':'inline-block',
@@ -216,13 +251,33 @@ function about(sel){
 }
 
 function works(sel){
+    //------------ＧＬＯＢＡＬ-----------------
     let PAGE = $(sel);
-    PAGE.append("<h2>");
-    PAGE.append("<p>");
     
-    let h2 = PAGE.children("h2:last");
-    let p = PAGE.children("h2:last");
 
-    h2.text("作品");
-    p.text("自己做卡片");
+    //------------ＳＴＲＵＣＴＵＲＥ------------
+    let zone,works_h2,works_p
+    PAGE.append("<div>");
+    zone = PAGE.children('div:last');
+    zone.append("<h2>");
+    works_h2 = zone.children("h2:last");
+    zone.append("<p>");
+    works_p = zone.children("p:last");
+
+
+    //------------ＳＴＹＬＥＳ-----------------
+    let zoneStyle={
+        'display':'block',
+        'text-align':'center',
+        'width':'100%',
+        'height':'calc(100vh - 120px)'
+    }
+    
+    //------------ＣＳＳ-----------------
+    zone.css(zoneStyle);
+    
+
+    //------------ＴＥＸＴ---------------------
+    works_h2.text("作品");
+    works_p.text("自己做卡片");
 }

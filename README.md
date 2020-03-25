@@ -5,6 +5,7 @@
 主頁\
 about\
 works\
-
-效果部分：\
-[CSS]使用了過度( Transitions )
+**3.25**\
+：\
+[HTML]切換頁面 使用Hash\
+[CSS]使用了過度作為效果( Transitions )
