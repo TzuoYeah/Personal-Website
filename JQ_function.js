@@ -154,15 +154,21 @@ function about(sel){
         b3>=2 ? b3=0 : b3++;
         switch(b3){
             case 0:
+                board1.hide();
+                board2.hide();
                 board3.hide();
                 board1.fadeIn(500);
                 break;
             case 1:
                 board1.hide();
+                board2.hide();
+                board3.hide();
                 board2.fadeIn(500);
                 break;
             case 2:
+                board1.hide();
                 board2.hide();
+                board3.hide();
                 board3.fadeIn(500);
                 break;
         }
@@ -336,28 +342,34 @@ function works(sel){
     
 
     //------------ＳＴＲＵＣＴＵＲＥ------------
-    let zone,works_h2,works_p
+    let worksZone,works_h2,works_p
+    PAGE.append("<h2>");
+    works_h2 = PAGE.children("h2:last");
+    PAGE.append("<p>");
+    works_p = PAGE.children("p:last");
+
     PAGE.append("<div>");
-    zone = PAGE.children('div:last');
-    zone.append("<h2>");
-    works_h2 = zone.children("h2:last");
-    zone.append("<p>");
-    works_p = zone.children("p:last");
+    worksZone = PAGE.children('div:last');
 
 
     //------------ＳＴＹＬＥＳ-----------------
+    let center={
+        'text-align':'center',
+    }
     let zoneStyle={
         'display':'block',
         'text-align':'center',
         'width':'100%',
-        'height':'calc(100vh - 120px)'
+        'height':'calc(100vh - 205px)'
     }
     
     //------------ＣＳＳ-----------------
-    zone.css(zoneStyle);
-    
+    works_h2.css(center);
+    works_p.css(center);
+
+    worksZone.css(zoneStyle);
 
     //------------ＴＥＸＴ---------------------
     works_h2.text("作品");
-    works_p.text("卡片");
+    works_p.text("卡片 / 條列式");
 }
