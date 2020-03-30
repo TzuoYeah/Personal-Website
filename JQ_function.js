@@ -323,7 +323,7 @@ function skill(sel){
     card1.fadeIn(300);
     card2.fadeIn(600);
     card3.fadeIn(900);
-    //------------ ＥＶＥＮＴＳ---------------
+    //------------ＥＶＥＮＴＳ---------------
     //Ｂ２
     let cardView={
         'top':'-10px',
@@ -334,6 +334,25 @@ function skill(sel){
     card1.hover(function(){$(this).css(cardView);}  ,function(){$(this).css(cardStyle);});
     card2.hover(function(){$(this).css(cardView);}  ,function(){$(this).css(cardStyle);});
     card3.hover(function(){$(this).css(cardView);}  ,function(){$(this).css(cardStyle);});
+
+    //------------ＮＯＴＥ---------------
+    /**
+     * 分類展示
+     * class1 : 基本能力
+     * 語言
+     * 資料庫
+     * 工具
+     * 
+     * class2 : 領域能力
+     * Web
+     * Cloud
+     * CI/CD
+     * 
+     * class3 : 其他能力?
+     * 開發(設計模式、軟體工程、UML...)
+     * 維運(TCP/IP...)
+     * 
+     */
 
 }
 function works(sel){
@@ -372,4 +391,26 @@ function works(sel){
     //------------ＴＥＸＴ---------------------
     works_h2.text("作品");
     works_p.text("卡片 / 條列式");
+    /**
+     * -Web
+     * . 農村再生基金系統
+     * . (作品) KabBan系統
+     * . (作品) ...產製圖表
+     * . (作品) 個人網站
+     * 
+     * -AI
+     * . Marsk RCNN輪廓切割
+     * 
+     * -IoT
+     * .魚菜共生水質監測
+     * 
+     * 
+     * -Cloud
+     * .
+     * 
+     * 
+     * Other
+     * .五子棋對戰AI
+     * .生命遊戲
+     */
 }
