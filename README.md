@@ -10,3 +10,4 @@ works\
 ：\
 [HTML]切換頁面 使用Hash\
 [CSS]使用了過度作為效果( Transitions )
+完整
